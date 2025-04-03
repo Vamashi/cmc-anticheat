@@ -95,7 +95,9 @@ def search(path="."):
             # print(f"Checking {os.path.join(root, file)}")
             if cheats.search(file):
                 i += 1
-                print(f" - {root}{os.sep}{cheats.sub(r'\033[1m\g<0>\033[22m', file)}")
+                try:
+                    print(f" - {root}{os.sep}{cheats.sub(r'\033[1m\g<0>\033[22m', file)}")
+                except: continue
 
             if jar.search(file):
                 sha512_hash = sha512()
