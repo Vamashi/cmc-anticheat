@@ -1,1 +1,45 @@
-print("hello")
+import os
+from colorama import Fore, init
+
+init()
+
+strings = """
+net/java/l SSnet/java/f net/java/g net/java/h
+net/java/i net/java/m net/java/r net/java/s
+net/java/t net/java/y
+""".split()
+
+def clean_strings(string):
+    return string.replace(" ", "").replace("\n", "").replace("\r", "").replace("\t", "").lower()
+
+def print_color(color, text):
+    print(color + text + Fore.RESET)
+
+def get_all_files():
+    global strings
+    root_path = os.path.expanduser("~")+"/"
+    found_total = 0
+
+    for (root, dirs, files) in os.walk(root_path):
+        for file in files:
+            filepath = os.path.join(root, file)
+            try:
+                if not os.path.isfile(filepath): continue
+
+                with open(filepath, "rb") as f:
+                    content = f.read()
+                    matches = []
+
+                    for s in strings:
+                        if (s.replace("\n","")).encode() in content:
+                            matches.append(s)
+
+                    if matches:
+                        found_total += 1
+                        msg = f"[{found_total}] Найдено в {filepath}: {matches}"
+                        print_color(Fore.YELLOW if len(matches) < 4 else Fore.RED, msg)
+            except Exception as e:
+                print_color(Fore.LIGHTBLACK_EX, f"[!] Ошибка при чтении {filepath}: {str(e)}")
+
+    print_color(Fore.GREEN, f"Готово. Всего найдено файлов: {found_total}")
+get_all_files()
