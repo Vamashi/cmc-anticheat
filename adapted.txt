@@ -17,5 +17,5 @@ RenameMe | Hitbox | bolshoy | elytra_swap | M3dC3t | Catalyst | TrollHack | Cosm
 churka | churkaclient | LavaClearView | EzHitboxes | setBoundingBox | bushroot | wexside | .wexside | gavaw | DeltaLoader | DeltaClient | troxil | VenusFree | VenusWare |
 NewLauncher | flauncher | .flauncher | WILDCLIENT | haruka | churka | churkaclient | Meteor | Meteorclient | Expensive | ThunderHack | ThunderHackPlus | Excellent |
 ExcellentClient | NewCode | Rockstar | arbuz | Arbuz | ArbuzClient | Wissend | WissendClient | Nursultan | NursultanLoader | EvaWare | Paradise |  Aristois | Wurst | Minced |
-MincedClient | NewLight | Impact | Inertia | Wurst | dreamwindows | dreamlinux | tweaker | dd.jar
+MincedClient | NewLight | Impact | Inertia | Wurst | dreamwindows | dreamlinux | tweaker | dd.jar | deadshot | eclient | hydraclient | biboran | lineclient | nodus
 
